@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import { redirect } from "next/navigation";
 import Featured from "./_components/featured";
 import Hero from "./_components/hero";
 import HowItWorks from "./_components/how-it-works";
@@ -7,6 +9,9 @@ import Services from "./_components/services";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    redirect("/waitlist");
+  }, []);
   return (
     <div className="bg-white">
       <Hero />
